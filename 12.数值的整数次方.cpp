@@ -12,7 +12,7 @@ class Solution {
 public:
     double Power(double base, int exponent) {
     	long long p = abs((long long)exponent);
-        //int p = abs( exponent); 这里不能用int, 否则在 exponent = 0 时会产生溢出
+        //int p = abs(exponent); 这里不能用int, 否则在 exponent = INT_MIN 时会产生溢出
         double r = 1.0;
         while (p) {
             if (p & 1)

@@ -4,6 +4,13 @@
 
 思路
 空间换时间, 新建一个数组, 顺序扫描原数组两遍, 第一遍见到奇数就 push_back(), 第二遍见到偶数就push_back(), 最后把新数组整体赋值给原数组.
+
+拓展
+另外, STL中有一个 stable_partition(iterator begin, iterator end, 函数名fun) 函数,
+
+函数传入三个参数, 分别为函数作用起止位置, 和一个返回值为bool类型的自定义函数,
+
+函数功能为, 将 fun() 函数返回值为真的放在数组前, 假的放在数组后, 可以在本题中使用.
 */
 class Solution {
 public:
@@ -21,4 +28,15 @@ public:
         }
         array = a;
     }
+};
+
+class Solution {
+public: 
+    bool fun(int n){
+        return ((n & 1) == 1);　//奇数返回真 
+    }
+ 
+    void reOrderArray(vector<int> &array){ 
+        stable_partition(array.begin(), array.end(), fun);
+    }
 };

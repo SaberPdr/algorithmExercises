@@ -9,7 +9,7 @@
 class Solution {
 public:
     int jumpFloorII(int number) {
-		    return  1<<--number;
+	return  1<<--number;
         //1左移(n-1)位 = 2^(n-1)
     }
 };

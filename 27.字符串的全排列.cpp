@@ -23,7 +23,7 @@ public:
     }
 };
 
-/*
+
 //STL中next_permutation()的实现
 template <class T>
 bool next_permutation(T first, T last) {
@@ -53,4 +53,4 @@ bool next_permutation(T first, T last) {
       return false;
     }
   }
-}*/
+}
